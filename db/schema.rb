@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_01_144518) do
+ActiveRecord::Schema.define(version: 2021_09_13_122013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_09_01_144518) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "advice_product_url"
+    t.date "closed_at"
     t.index ["nomination_id"], name: "index_bids_on_nomination_id"
     t.index ["unit_id"], name: "index_bids_on_unit_id"
     t.index ["user_id"], name: "index_bids_on_user_id"
@@ -117,8 +118,15 @@ ActiveRecord::Schema.define(version: 2021_09_01_144518) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "jti", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "phone_number"
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["jti"], name: "index_users_on_jti", unique: true
     t.index ["position_id"], name: "index_users_on_position_id"
   end
 
