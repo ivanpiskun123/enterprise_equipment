@@ -4,6 +4,7 @@ import Users from "../pages/Users";
 import Units from "../pages/Units";
 import Profile from "../pages/Profile";
 import Statistics from "../pages/Statistics";
+import AdminLoader from "../pages/AdminLoader";
 
 export const privateRoutes = [
     {path: '/bids_list', component: Bids, exact: true},
@@ -12,6 +13,7 @@ export const privateRoutes = [
     {path: '/units_list', component: Units, exact: true},
     {path: '/units_list/:id', component: Units, exact: true},
     {path: '/statistics', component: Statistics, exact: true},
+    {path: '/admin', component: AdminLoader, exact: true},
 ]
 
 export const publicRoutes = [

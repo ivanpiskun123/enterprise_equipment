@@ -66,7 +66,7 @@ const AdminNavbar = ({signOut, isAdmin}) => {
         </MDBNavLink>
 
 
-        <MDBNavLink className="white-text ml-3" to="#!">
+        <MDBNavLink className="white-text ml-3" to="/admin">
           <MDBIcon icon="cogs" size="2x" className="white-text mr-3" />
         </MDBNavLink>
 

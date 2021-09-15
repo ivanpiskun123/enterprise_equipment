@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'nominations/index'
   root 'pages#home'
 
@@ -21,6 +24,7 @@ Rails.application.routes.draw do
   controllers: {
     sessions: 'users/sessions',
   }
+
 
     get '/current_user', to: 'current_user#index'
 

@@ -56,4 +56,4 @@ gem 'devise'
 gem 'jsonapi-serializer'
 gem 'rack-cors'
 gem 'devise-jwt'
-gem "mini_magick"
+gem 'rails_admin', '~> 2.0'

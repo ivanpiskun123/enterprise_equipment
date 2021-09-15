@@ -19,9 +19,8 @@ const  AppRouter = () => {
                     key={route.path}
                 />
             )}
-            {
-              <Redirect to="/statistics" />
-              // <Redirect to={`/units_list/`+localStorage.getItem('user_id')}/>
+            {  
+              <Redirect to={`/units_list/`+localStorage.getItem('user_id')}/>
             }
 
         </Switch>
